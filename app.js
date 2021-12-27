@@ -54,9 +54,9 @@ function checkDelete(e){
 }
 
 function filterTodo(e){
-    const todos = todoList.childNodes;
-    console.log(todos);
-    todos.forEach(function(todo){
+    const todos = todoList.childNodes; //childNode returns NodeList object and first element of the Nodelist is a text. 
+    for(let i=1;i<todos.length;i++){ //Thats Why we starts from 1st index
+        let todo = todos[i];
         switch(e.target.value){
             case "all":
                 console.log("all");
@@ -81,7 +81,7 @@ function filterTodo(e){
                 }
                 break;
         }
-    });
+    }
 }
 
 function saveLocal(todo){
