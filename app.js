@@ -59,16 +59,13 @@ function filterTodo(e){
         let todo = todos[i];
         switch(e.target.value){
             case "all":
-                console.log("all");
                 todo.style.display='flex';
                 break;
             case "completed":
                 if(todo.classList.contains('completed')){
-                    console.log("complete if");
                     todo.style.display='flex';
                 }
                 else{
-                    console.log("complete");
                     todo.style.display='none';
                 }
                 break;
